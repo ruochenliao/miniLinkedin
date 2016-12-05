@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/caption_text_size"
-                    tools:text="Jing Guo" />
+                    tools:text="Ruochen Liao" />
 
                 <ImageButton
                     android:id="@+id/edit_basic_info"
@@ -55,12 +55,15 @@
                 android:id="@+id/user_picture"
                 android:layout_width="@dimen/user_picture_size"
                 android:layout_height="@dimen/user_picture_size"
+                android:src="@drawable/head"
+                android:contentDescription="@string/user_picture"
+                android:layout_alignBottom="@+id/email"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/guojing"
-                android:contentDescription="@string/user_picture"/>
+                android:layout_alignParentEnd="true" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
+        <!-- Education -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +89,7 @@
                 android:contentDescription="@string/add_education"/>
 
         </LinearLayout>
-
+<!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,8 +100,7 @@
                 android:id="@+id/education_school"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:text="CMU (2012 ~ 2016)" />
+                android:layout_weight="1" />
 
             <ImageButton
                 android:id="@+id/edit_education_btn"
@@ -109,13 +111,69 @@
                 android:contentDescription="@string/edit_education"/>
 
         </LinearLayout>
-
+-->
         <TextView
             android:id="@+id/education_courses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="- Database\n- Algorithm\n- Network" />
+            />
+
+        <!-- Experience -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/caption_text_size"
+                android:textAllCaps="true"
+                android:text="@string/section_Experience" />
+
+            <ImageButton
+                android:id="@+id/add_Experience_btn"
+                android:layout_width="@dimen/icon_button_size"
+                android:layout_height="@dimen/icon_button_size"
+                android:src="@drawable/ic_add_black_18dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/add_experience"/>
+
+        </LinearLayout>
+
+        <!-- PROJECTS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/caption_text_size"
+                android:textAllCaps="true"
+                android:text="@string/section_Project" />
+
+            <ImageButton
+                android:id="@+id/add_Project_btn"
+                android:layout_width="@dimen/icon_button_size"
+                android:layout_height="@dimen/icon_button_size"
+                android:src="@drawable/ic_add_black_18dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/add_project"/>
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
 
 </ScrollView>
